@@ -6,3 +6,7 @@ my-gotty:
   image: modenaf360/gotty:latest
   stdin_open: true
   tty: true                     #using bash TTY mode (pseudo-TTY)
+  securityContext:
+          privileged: true
+          capabilities:
+            add: ["NET_ADMIN","NET_RAW"]
